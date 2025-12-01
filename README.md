@@ -35,9 +35,12 @@ The unit of analysis is an individual person, with each row representing a uniqu
 
 ### The dataset includes: 
 ● Demographics: Gender, Age, Height, Weight, Family history of overweight. 
+
 ● Eating habits: HighCalFreq, VegMealFreq, MealsPerDay, Snacking, WaterIntake, 
 TrackCalories. 
+
 ● Lifestyle habits: ExerciseFreq, ScreenTime, AlcoholFreq, SMOKE, TransportMode. 
+
 ● Target variable: ObesityLevel, classified into “Insufficient Weight,” “Normal Weight,” 
 “Overweight Level I & II,” and “Obesity Type I–III.” 
 
