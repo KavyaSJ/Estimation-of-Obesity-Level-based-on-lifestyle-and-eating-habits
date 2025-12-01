@@ -58,9 +58,11 @@ Specifically, the file ObesityDataSet_raw_and_data_sinthetic.csv was downloaded 
 format. 
 For the analysis, Python libraries such as pandas, numpy, matplotlib, and seaborn were used. 
 The dataset was loaded into a Pandas DataFrame directly from the GitHub repository: 
+
 url = 
 "https://raw.githubusercontent.com/RohitG57/Estimation-of-obesity-levels-based-on-eating-habits-and-physical-condition/main/ObesityDataSet_raw_and_data_sinthetic.csv" 
 df= pd.read_csv(url) 
+
 The dataset was loaded into a Pandas DataFrame for inspection and further analysis using 
 pd.read_csv().  
 
@@ -71,6 +73,7 @@ standardized names.
 
 Step 2. Converting Columns to Appropriate Data Types: To optimize memory usage and 
 improve performance, we converted certain columns to more suitable data types. 
+
 ● Categorical Conversion - Columns with repeated text values, such as Gender, Snacking, 
 AlcoholFreq, TransportMode, ObesityLevel, were converted to the category data type. This 
 reduces memory usage and improves performance when analyzing repeated text values.  
@@ -82,3 +85,23 @@ Step 4. Checking for Duplicate Records : The dataset was checked for duplicate r
 few duplicate observations were found. These duplicates were removed to ensure data 
 accuracy and prevent repeated information from affecting the analysis. The final dataset 
 contained 2,087 rows and 17 columns, ensuring cleaner and more reliable data for analysis. 
+
+Renaming some columns' names:
+
+df.rename(columns={
+    "family_history_with_overweight": "FamilyOverweight",
+    "FAVC": "HighCalFreq",
+    "FCVC": "VegMealFreq",
+    "NCP": "MealsPerDay",
+    "CAEC": "Snacking",
+    "CH2O": "WaterIntake",
+    "SCC": "TrackCalories",
+    "FAF": "ExerciseFreq",
+    "TUE": "ScreenTime",
+    "CALC": "AlcoholFreq",
+    "MTRANS": "TransportMode",
+    "NObeyesdad": "ObesityLevel"
+}, inplace=True)
+
+
+
